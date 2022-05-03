@@ -1,0 +1,245 @@
+@import"../import/mixins.scss";
+@import"../import/variables.scss";
+@import"../import/header.scss";
+@import"../import/footer.scss";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    margin: auto;
+    @media screen and (max-width: 320px){
+        width: 100%;
+        min-width: 250px;
+    }
+}
+
+/*HEADER*/
+
+.header_restaurant{
+    font-family: 'Shrikhand', cursive;
+    padding: 15px;
+    z-index: 1;
+    display: flex;
+    position: relative;
+    border-bottom: 1px solid #EAEAEAff;
+        a{
+            position: absolute;
+            align-self: center;
+            font-size: larger;
+            text-transform: none;
+            color: black;
+        }
+        h1{
+            width: 100%;
+            font-family: 'Shrikhand';
+        }
+}
+
+img{
+        max-width: 100%;
+        max-height: 304px;
+        width: 100%;
+        object-fit: cover;
+}
+
+
+
+.menu{
+    background-color: $grey-background;
+    border-radius: 30px 30px 0px 0px;
+    place-content: space-between;
+    padding: 2rem 1rem;
+    overflow: hidden;
+    margin-top: -30px;
+    position: relative;
+    @media screen and (min-width:1024px){
+        margin-inline:auto;
+        width: 75%;
+      }
+}
+
+.nom-notation-restaurant {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+        h2{
+            font-family: "Shrikhand";
+            min-width: 90%;
+            align-items: center;      
+        }
+}
+
+
+
+/*Positionnement du coeur et paramètrage de l'animation.*/ 
+
+
+
+.fa-stack {
+    align-self: center;
+    cursor: pointer;
+}
+
+.fa{
+    @include positionnement-coeur;
+    cursor: pointer;
+    background-image: linear-gradient(0deg, $primary-color, $secondary_color);
+    background-clip:text;
+    -webkit-background-clip:text;
+    color: transparent;
+    opacity: 0.0;
+    &:hover{
+        opacity: 1.0;
+        transition-duration: 2s;
+    }
+}    
+
+.far{
+    @include positionnement-coeur;
+    opacity: 0.3;
+}    
+
+.sous_parties_menu{
+    @media screen and (min-width: 640px){
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.sous_partie{
+    width: 100%;
+    margin: .5rem 0rem;
+    @media screen and (min-width: 640px){
+        max-width: 30%;
+    }
+        h3{
+            text-transform: uppercase;
+            font-weight: lighter;
+            width: 100%;
+            padding: .5rem 0rem;
+            border-bottom: 5px solid $tertiary-color;
+            position: relative;
+            &::after {
+                content: "";
+                width: 100%;
+                height: 7px;
+                background-color: $grey-background;
+                position: absolute;
+                bottom: -6px;
+                right: -50px;
+            }
+    }
+}
+
+article{
+    width: 100%;
+    height: 4rem;
+    background-color: #fff;
+    display: flex;
+    margin: 1rem 0rem;
+    border-radius: 1rem;
+    box-shadow: 0px 3px 3px 1px rgb(196, 188, 188);
+    overflow: hidden;
+        .header{
+            display: flex;
+            flex-direction: column;
+            place-content: space-between;
+            min-width: 80%;
+            padding: .7rem 0rem .7rem .5rem;
+            transition-duration: 3s;
+                      &::first-line{
+                      font-weight: 700;
+            }
+        }
+        .title-header{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            width: 95%;
+        }
+        p{
+            @extend .title-header; 
+            font-size: small;
+        }
+        &:hover{
+            @include animationValidation;
+            cursor: pointer;
+        }
+}
+    
+.prix {
+    padding: 1rem 0rem;
+    text-align: right;
+    min-width: 10%;
+    height: 100%;
+    display: flex;
+    place-items: end;
+    font-size: initial;
+    font-weight: 700;
+    padding: .7rem 0rem;
+}
+    .wrapIcon{
+        width: 30%;
+        background-color: $tertiary-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 2s;
+        transform: translate(95px, 0px);
+            i{
+                    align-self: center;
+                    color: $tertiary-color;
+                    transform: rotate(180deg);
+                    transition-duration: 2s;
+            }
+            .backgroundIcon{
+                place-content: center;
+                display: flex;
+                border-radius: 50px;
+                padding: .3rem;
+                background-color: #fff;
+                transition-duration: 2s;
+            }
+    }
+
+    .apparition_un{
+   animation-name: appear;
+   animation-duration: 1s;
+}
+   .apparition_deux{
+    animation-name: appear;
+   animation-duration: 1.5s;
+}
+   .apparition_trois{
+    animation-name: appear;
+    animation-duration: 2.0s;
+}
+    .apparition_quatre{
+    animation-name: appear;
+    animation-duration: 2.5s;
+}
+
+.boutton_commander{
+    padding: 35px 0px;
+        span{
+            background-image: linear-gradient(350deg, $primary-color, $secondary_color);
+            color: white;
+            font-weight: bold;
+            width: 50%;
+            border-radius: 50px;
+            margin: auto;
+            text-align: center;
+            padding: 15px;
+            display: block;
+            box-shadow: 0px 0px 1px 1px rgb(184, 184, 184);;
+            &:hover{
+                cursor: pointer;
+                box-shadow: 0px 5px 5px 5px rgb(184, 184, 184);;
+            }
+            @media screen and (min-width: 992px){
+               width: 25%;
+            }
+    }  
+}
