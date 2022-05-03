@@ -6,6 +6,7 @@
 *{
     box-sizing: border-box;
     margin: 0;
+    font-family: "Roboto", sans-serif;
 }
 
 body{
@@ -63,6 +64,7 @@ img{
 
 .nom-notation-restaurant {
     justify-content: space-between;
+    display: flex;
     flex-wrap: nowrap;
         h2{
             font-family: "Shrikhand";
