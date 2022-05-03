@@ -1,0 +1,60 @@
+/*Code pour animation lors du survol du coeur*/
+@mixin positionnement-coeur {
+    float: right;
+    align-self: center;
+    font-size: 25;
+}
+
+/*Code pour animation lors du survol d'un plat*/
+@mixin animationValidation{
+    .wrapIcon{
+        transform: translate(10px, 0px);
+        transition-duration: 2s;
+        min-width: 30%;   
+    }
+
+    .header{
+        min-width: 60%;
+        transition-duration: 2s;
+    }
+
+    .menuItem__icon{
+        transform : rotate(360deg);
+        transition-duration: 2s;
+    }
+}
+
+/*keyframe pour l'apparition graduelle des éléments*/
+
+@keyframes appear {
+    from {
+        transform: translate(0px,-25px);
+        opacity: 0.0;
+    }
+    to {
+        transform: translate(0,0);
+        opacity: 1;
+    }   
+  }
+
+  /*Keyframes pour l'animation lors du chargement de la page d'acceuil*/
+
+  @keyframes disparition{
+      0%{
+        transform: translate(0px, 0px);
+      }
+      100%{
+        transform: translate(100%, 0px);
+      }
+  }
+
+  @keyframes spin{
+    0% { 
+        transform: rotate(0deg); 
+    }
+    100% { 
+        transform: rotate(360deg); 
+    }
+  }
+
+

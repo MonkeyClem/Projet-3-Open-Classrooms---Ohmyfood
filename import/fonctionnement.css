@@ -1,0 +1,75 @@
+#fonctionnement {
+  margin: 48px 0px;
+}
+
+@media screen and (min-width: 640px) {
+  #fonctionnement {
+    place-content: center;
+  }
+}
+
+#fonctionnement h2 {
+  margin-left: 5%;
+}
+
+@media screen and (min-width: 640px) {
+  #fonctionnement h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0%;
+  }
+}
+
+#fonctionnement ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  counter-reset: etapesListe;
+}
+
+#fonctionnement li {
+  width: 75%;
+  text-align: center;
+  font-weight: 600;
+  margin: 8px 0px;
+  padding: 24px;
+  background-color: #F6F6F6ff;
+  border-radius: 20px;
+  position: relative;
+}
+
+#fonctionnement li:hover {
+  background-color: #ecdffa;
+}
+
+#fonctionnement i {
+  height: 10px;
+  width: 20px;
+}
+
+.etapes::before {
+  counter-increment: etapesListe;
+  content: counter(etapesListe) " ";
+  background: #9356DC;
+  color: #fff;
+  left: -8px;
+  height: 24px;
+  width: 24px;
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+}
+
+.etape_texte {
+  padding: 20px;
+}
+/*# sourceMappingURL=fonctionnement.css.map */

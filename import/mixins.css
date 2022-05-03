@@ -1,0 +1,73 @@
+@charset "UTF-8";
+/*Code pour animation lors du survol du coeur*/
+/*Code pour animation lors du survol d'un plat*/
+/*keyframe pour l'apparition graduelle des éléments*/
+@-webkit-keyframes appear {
+  from {
+    -webkit-transform: translate(0px, -25px);
+            transform: translate(0px, -25px);
+    opacity: 0.0;
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  from {
+    -webkit-transform: translate(0px, -25px);
+            transform: translate(0px, -25px);
+    opacity: 0.0;
+  }
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+/*Keyframes pour l'animation lors du chargement de la page d'acceuil*/
+@-webkit-keyframes disparition {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(100%, 0px);
+            transform: translate(100%, 0px);
+  }
+}
+@keyframes disparition {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+  }
+  100% {
+    -webkit-transform: translate(100%, 0px);
+            transform: translate(100%, 0px);
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+/*# sourceMappingURL=mixins.css.map */

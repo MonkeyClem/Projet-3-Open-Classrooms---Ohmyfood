@@ -1,0 +1,12 @@
+header {
+  font-family: 'Shrikhand', cursive;
+  padding: 15px;
+  z-index: 1;
+  border-bottom: 1px solid #F6F6F6ff;
+}
+
+header h1 {
+  text-align: center;
+  font-family: 'Shrikhand';
+}
+/*# sourceMappingURL=header.css.map */

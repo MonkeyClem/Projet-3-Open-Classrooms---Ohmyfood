@@ -1,0 +1,35 @@
+footer {
+  width: 100%;
+  background-color: #353535ff;
+  color: #fff;
+}
+
+footer ul {
+  list-style: none;
+  padding: 20px;
+}
+
+footer li {
+  line-height: 2.0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media screen and (min-width: 1024px) {
+  footer li {
+    margin: auto;
+  }
+}
+
+footer li:first-child {
+  font-family: 'Shrikhand';
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+
+footer i {
+  width: 25px;
+}
+/*# sourceMappingURL=footer.css.map */
