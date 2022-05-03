@@ -4,6 +4,11 @@ footer {
   color: #fff;
 }
 
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
 footer ul {
   list-style: none;
   padding: 20px;
